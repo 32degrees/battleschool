@@ -8,6 +8,10 @@ class Git(Source):
     """git source handler.
     """
 
+    def run(self, inventory, sshpass, sudopass):
+        playbooks = []
+        return playbooks
+
     def type(self):
         return 'git'
 
