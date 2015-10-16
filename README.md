@@ -168,7 +168,7 @@ I alias battle to `battle -K`
 
 Force update of the playbooks from a VCS such as git
 
-    -u, --update-vcs      update playbooks from a version control system (vcs)
+    -X, --update-sources      update playbooks from a version control system (vcs)
 
 
 ### battle USAGE
@@ -218,10 +218,12 @@ Force update of the playbooks from a VCS such as git
       -T TIMEOUT, --timeout=TIMEOUT
                             override the SSH timeout in seconds (default=10)
       -t TREE, --tree=TREE  log output to this directory
-      -u, --update-source   update playbooks from sources(git, url, etc...)
+      -X, --update-source   update playbooks from sources(git, url, etc...)
       -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
                             connection debugging)
       --version             show program's version number and exit
+      
+    For more options see `ansible-playbook -h`
 
 =================
 
