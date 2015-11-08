@@ -228,7 +228,6 @@ def main(args, battleschool_dir=None):
         if not os.path.isfile(playbook):
             raise errors.AnsibleError("the playbook: %s does not appear to be a file" % playbook)
 
-    become = True
     #-----------------------------------------------------------
     # run all playbooks specified from config
     for playbook in playbooks_to_run:
@@ -259,8 +258,10 @@ def main(args, battleschool_dir=None):
             stats=stats,
             timeout=options.timeout,
             transport=options.connection,
-            become=become,
-            become_method="sudo",
+            # To be able escalate privilege per task/play/playbook
+            # we don't need pass become and become_method directives there
+            # become=become,
+            # become_method="sudo",
             become_user=options.sudo_user,
             become_pass=sudopass,
             extra_vars=extra_vars,
