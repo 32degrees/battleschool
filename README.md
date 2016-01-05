@@ -34,7 +34,11 @@ As long as your `config.yml` doesn't have a `source.local` section (see [configu
 
 ### running battleschool
 
-`battle`
+    battle
+
+If you setup `sudo` without the `NOPASSWD` directive then you have to start `battle` with the option `--ask-sudo-pass`.
+
+    battle --ask-sudo-pass
 
 ### configuration
 
