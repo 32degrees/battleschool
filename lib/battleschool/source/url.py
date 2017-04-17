@@ -7,6 +7,9 @@ from . import Source
 class Url(Source):
     """url source handler.
     """
+    def run(self, inventory, sshpass, sudopass):
+        playbooks = []
+        return playbooks
 
     def type(self):
         return 'url'
